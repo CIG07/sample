@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Harmony Therapy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --soft-gold: #E8D8B8;
+            --white: #FFFFFF;
+            --cream: #F9F6F0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #444;
+            background-color: var(--white);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--soft-gold) 100%);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.1)),
+                        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1920');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            background-color: var(--gold);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-top: 2rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid var(--soft-gold);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            flex: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            background: var(--cream);
+            padding: 3rem 5%;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="#" class="logo">Golden Harmony</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Finding Balance Through Compassionate Care</h1>
+            <p>Specializing in anxiety, stress management, and relationship counseling. Start your journey to emotional well-being today.</p>
+            <button class="cta-button">Schedule Consultation</button>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <div class="profile-image">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71eaefec4d?auto=format&fit=crop&w=500" alt="Dr. Emily Smith">
+            </div>
+            <div class="about-content">
+                <h3>Dr. Emily Smith, PhD</h3>
+                <p>With over 15 years of experience in cognitive behavioral therapy and mindfulness-based approaches...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Individual Therapy</h3>
+                <p>Personalized one-on-one sessions to address personal challenges</p>
+            </div>
+            <div class="service-card">
+                <h3>Couples Counseling</h3>
+                <p>Strengthen relationships and improve communication</p>
+            </div>
+            <div class="service-card">
+                <h3>Stress Management</h3>
+                <p>Develop coping strategies for modern life challenges</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="color: var(--gold);">© 2023 Golden Harmony Therapy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
